@@ -1,0 +1,95 @@
+
+.App{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* styles.css */
+
+.restaurant {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+
+  }
+  
+  .name-loc {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  /* styles.css */
+
+.restaurant-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 95%;
+    padding: 12px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .rate{
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
