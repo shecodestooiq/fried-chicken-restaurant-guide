@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img1 from '../Food_Logo.png'
+import img1 from '../Food_Logo2.png'
 
 export default function RestaurantsList() {
     const [restaurant, setRestaurant] = useState([{
@@ -62,15 +62,17 @@ export default function RestaurantsList() {
         <>
             <div className='header'>
                 <div>
-                    <h1>Explore The Highest Rating Restaurants For Fried Chicken!</h1>
+                    <h1>Discover The Highest Rated Restaurants For Fried Chicken!🍗 </h1>
                     <h2>Start Scrolling...</h2>
                 </div>
             </div>
             <div className='mainSection'>
-                <h1>Recommended Fried Chicken Restaurants in Baghdad!</h1>
+                <h1>Explore and Add!</h1>
+                <h2>Recommended Fried Chicken Restaurants in Baghdad with Special Deals!</h2>
                 <div className='grid'>
                     <input type="text" value={nameValue} onChange={nameChange} placeholder="Restaurant name"/>
                     <input type="text" value={locationValue} onChange={locationChange} placeholder="Restaurant location"/>
+                    <label htmlFor="range">Choose range from 1 to 100:</label>
                     <input type="range" value={rangeValue} onChange={rangeChange}/>
                     <button className='AddButton' onClick={addRestaurant}>Add New Restaurant</button>
                 </div>
@@ -80,7 +82,7 @@ export default function RestaurantsList() {
                         <img src={img1} alt="" />
                         <h3>{rest.name}</h3>
                         <h4>Location: {rest.location}</h4>
-                        <h4>Rate: {rest.range}</h4>
+                        <h4 className='rateColor'>Rate: ⭐️⭐️⭐️⭐️ {rest.range}</h4>
                         <div className='cardButton'>
                         <button onClick={()=>deleteRestaurant(rest.id)}>Delete</button>
                         <button onClick={()=>updateRange(rest.id)}>Change Rate</button></div>
@@ -89,7 +91,7 @@ export default function RestaurantsList() {
             </div>
             <div className='footer'>
                 <div>
-                    <h2>Have a good meal :)</h2>
+                    <h2>Have a good meal :) ❤️</h2>
                 </div>
                 {/* <div className='imgContainer'><img src={img} className="headerImg"/></div> */}
             </div>
