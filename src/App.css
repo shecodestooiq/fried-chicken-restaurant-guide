@@ -52,6 +52,9 @@ body{
     border-bottom: #0062ff 1px solid;
    
   }
+  .grid input::placeholder {
+    opacity: 0.4;
+  }
   .mainSection{
     margin: 10%;
     display: flex;

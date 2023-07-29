@@ -72,7 +72,7 @@ export default function RestaurantsList() {
                 <div className='grid'>
                     <input type="text" value={nameValue} onChange={nameChange} placeholder="Restaurant name"/>
                     <input type="text" value={locationValue} onChange={locationChange} placeholder="Restaurant location"/>
-                    <label htmlFor="range">Choose range from 1 to 100:</label>
+                    <label htmlFor="range">Rate the restaurant from 1 to 100:</label>
                     <input type="range" value={rangeValue} onChange={rangeChange}/>
                     <button className='AddButton' onClick={addRestaurant}>Add New Restaurant</button>
                 </div>
