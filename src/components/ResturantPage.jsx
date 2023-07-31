@@ -4,8 +4,8 @@ import Input from "./Input";
 
 function ResturantPage() {
   let intialResturants = [
-    { name: "Meal king", location: "baghdad", rate: 5 },
-    { name: "Meal king", location: "baghdad", rate: 5 },
+    { name: "Meal king", location: "baghdad", rate: 5 , link:'meal-king'},
+    { name: "Meal king", location: "baghdad", rate: 5, link:'meal-king 2' },
   ];
 
   const [updatedResturants, setUpdatedResturants] = useState(intialResturants);
@@ -33,6 +33,7 @@ function ResturantPage() {
             location={res.location}
             rate={res.rate}
             onDelete={()=>deleteRestaurant(index)}
+            link={res.link}
           />
         );
       })}

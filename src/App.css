@@ -93,3 +93,19 @@
     justify-content: center;
     align-items: center;
   }
+
+ 
+  .title-loc{
+    height: 20vh;
+    background-color: #0056b3;
+    color:white;
+    border-radius: 40px;
+  }
+
+  .details{
+    height: 80vh;
+    margin-top: 1%;
+    border-radius: 40px;
+    background-color: #4898ee;
+    color:white
+  }
