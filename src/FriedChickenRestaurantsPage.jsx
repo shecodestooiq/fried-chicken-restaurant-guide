@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const FriedChickenRestaurantsPage = () => {
   const initialRestaurants = [
-    { id: 1, name: 'Chicken Heaven', location: '123 Main St, City', rating: 0.4 },
-    { id: 2, name: 'Fried Delight', location: '456 First Ave, Town', rating: 4.4 },
-    { id: 3, name: 'Crispy Coop', location: '789 Broadway, Village', rating: 5.4 },
+    { id: 1, name: 'Chicken Box', location: 'hay al jamia', rating: 0.4 },
+    { id: 2, name: 'Fried chicken', location: 'kadhmiya', rating: 4.4 },
+    { id: 3, name: 'lees', location: 'mansour', rating: 5.4 },
   ];
 
   const [restaurants, setRestaurants] = useState(initialRestaurants);
