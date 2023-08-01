@@ -15,7 +15,7 @@ function Form({ addRestaurant }) {
         });
         setRestaurantName('');
         setRestaurantLocation('');
-        setRestaurantRate('');
+        setRestaurantRate(0);
     };
 
     return (
@@ -35,11 +35,18 @@ function Form({ addRestaurant }) {
                     onChange={(e) => setRestaurantLocation(e.target.value)}
                 />
                 <label>Rate</label>
-                <input
-                    type='text'
-                    value={restaurantRate}
-                    onChange={(e) => setRestaurantRate(e.target.value)}
-                />
+                <div className='rate'>
+                    <input
+                        className='rate-input'
+                        type='range'
+                        min={0}
+                        max={5}
+                        step={1}
+                        value={restaurantRate}
+                        onChange={(e) => setRestaurantRate(e.target.value)}
+                    />
+                    <div className='rate-display'>{restaurantRate}</div>
+                </div>
                 <button onClick={handleAddRestaurant}>Add Restaurant</button>
             </form>
         </div>
