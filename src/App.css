@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body {
+    margin: 0;
+    font-family: 'Lobster', cursive;
+      background-color: #F5F5F5;
+      background-image: url(assets/bg.png);
+      background-blend-mode:soft-light;
+      -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .main-menu{
+    background-color: #FFA500;
+    width: 75%;
+    margin: auto;
+    margin-top: 5vh;
+    height: auto;
+    overflow: auto; 
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 1px 1px #ccccccda;
+  }
+  .main-menu h1{
+    padding-top:5vh;
+    color: #8B4513;
+  }
+  .main-menu form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+  .main-menu input ,button{
+    margin-top: 5px;
+    padding: 15px 8px;
+    border: none;
+    color: #404040;
+    border-radius: 5px;
+    font-size: 12pt;
+    font-style: italic;
+  }
+  .main-menu ul{
+    font-size: 12pt;
+    list-style: none;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+  .main-menu li .card{
+    width: 100%;
+    border: 1px solid #FFC107;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #ffffff;
+  }
+  .main-menu li .card:hover{
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .main-menu .rating{
+    color: #FFC107;
+    cursor: pointer;
+  }
+  
+  .main-menu button{
+    background-color: #800020;
+    border:1px solid #800020;
+    color: #F5F5F5;
+    font-weight: bold;
+  }
+  .main-menu button:hover{
+    background-color: transparent;
+    border:1px solid #800020;
+    color: #800020;
+    cursor: pointer;
+  }
+  .main-menu .delete{
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #8B4513;
+  }
+  .main-menu .delete:hover{
+    background-color: transparent;
+    color: #FF0000;
+    border: none;
+  }
+
+  @media (max-width: 991px) {
+    .main-menu{
+      width: 100%;
+    }
+  }
+.star-rating-container {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.filled-star, .empty-star {
+  color: #ffc107;
+}
+
+.filled-star {
+  opacity: 1;
+}
+
+.empty-star {
+  opacity: 0.5;
+}
