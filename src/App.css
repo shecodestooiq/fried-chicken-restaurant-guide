@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+
+.chicken-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 4rem;
+}
+
+.chicken-card input, select, label{
+  padding: 1rem;
+  border-radius: 1rem;
+  
+
+}
+
+button {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.init-data {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 4rem;
+  border-radius: 1rem;
+  border-style: groove;
+}
+
+.init-data label, h1, h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+ 
+}

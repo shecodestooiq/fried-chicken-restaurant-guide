@@ -1,7 +1,15 @@
 import './App.css';
+import Chicken from './Chicken';
+
+
+
 
 function App() {
-  return <>Fried Chicken Guide Web App</>;
+  return (<div>
+      <Chicken />
+    </div>);
+
+
 }
 
 export default App;
