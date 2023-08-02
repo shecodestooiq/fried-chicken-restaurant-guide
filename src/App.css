@@ -1,0 +1,125 @@
+
+body{
+    background-color: #D9631E;
+    color: #86BF0B;
+}
+.rest{
+    background-color: #592F25;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    right: 50%;
+    top: 10%;
+    border-radius: 10px;
+
+}
+.rest .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px
+}
+.rest .inputs input{
+    row-gap: 20px;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border: 1px solid #A6122D;
+    outline: none;
+    border-radius: 10px;
+    background-color: wheat;
+}
+.inputs button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+}
+.resty{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   font-size: 1.2rem;
+   font-weight: bold;
+   background-color: wheat;
+   margin-top: 25px;
+   border-radius: 10px;
+
+}
+
+.resty button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #86BF0B;
+
+    
+}
+
+@media only screen and (max-width:800px) {
+    .resty {
+       flex-direction: column;
+    }
+    
+}
+
+.infos{
+    background-color: blue;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 500px;
+    margin-top: 80px;
+    width: 50%;
+    margin-left: 350px;
+    border-radius: 10px;
+    text-align: left;
+}
+.description{
+    background-color: white;
+    color:#592F25;
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.description h3{
+    margin-top: 50px;
+    font-size: 1.8rem;
+    
+}
+
+.infos p{
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.infos h3{
+    text-decoration: underline;
+}
+.infos .desc{
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+.infos button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #86BF0B;  
+}
+.link{
+    text-decoration: none;
+    color: #86BF0B;
+}
