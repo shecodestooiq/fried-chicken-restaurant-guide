@@ -1,9 +1,11 @@
 import { React, useState } from 'react';
+import ResturantInfo from './RestaurantInfo';
+import {Link} from 'react-router-dom';
 
 
 function Chicken() {
 
-    const [chicken, setChicken] = useState([{
+    const [restList, setRestList] = useState([{
         name: "KFC",
         rating: 4
     },
@@ -16,52 +18,53 @@ function Chicken() {
         rating: 4
     }]);
 
-    const [newChicken, setNewChicken] = useState({ name: '', rating: '' });
+    const [newRestList, setnewRestList] = useState({ name: '', rating: '' });
 
     function handleChange(e) {
         const { name, value } = e.target;
-        setNewChicken({ ...newChicken, [name]: value }); //captures the name and value of input and uses them to update the newChicken state which is used to capture new data
+        setnewRestList({ ...newRestList, [name]: value }); //captures the name and value of input and uses them to update the newRestList state which is used to capture new data
 
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-        setChicken([...chicken, newChicken]); //spread operator that adds the newChicken list to the original chicken list, combining them
-        setNewChicken({ name: '', rating: '' }) //empties the state that we use to capture new data so we can use it again
+        setRestList([...restList, newRestList]); //spread operator that adds the newRestList list to the original restList list, combining them
+        setnewRestList({ name: '', rating: '' }) //empties the state that we use to capture new data so we can use it again
     }
 
 
 
 
     return (
-        <div className="chicken-card">
+        <div className="restList-card">
             <h1>Resturant List</h1>
             <form onSubmit={handleSubmit}>
                 <input
+                id='rest-name'
                     type='text'
                     name='name'
                     placeholder='Enter Resturant name'
-                    value={newChicken.name}
-                    onChange={handleChange}></input>
-                <select
+                    value={newRestList.name}
+                    onChange={handleChange} required>
+                    </input>
+                <select 
+                id='rating'
                     name='rating'
-                    value={newChicken.rating}
-                    onChange={handleChange}>
+                    value={newRestList.rating}
+                    onChange={handleChange} required>
                     <option value="">Select Rating</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option></select>
-                <button type='submit'>Add Resturant</button>
+                    <option id='value-one' value="1">1</option>
+                    <option id='value-two' value="2">2</option>
+                    <option id='value-three' value="3">3</option>
+                    <option id='value-four' value="4">4</option>
+                    <option id='value-five' value="5">5</option></select>
+                <button id='add-button' type='submit'>Add Resturant</button>
             </form>
 
-            {chicken.map((chicken, index) =>
-            (<div className='rest-card'>
-               <a href={`/${chicken.name}`}><h2>{chicken.name}</h2></a> 
-                <h2>{chicken.rating}/5</h2>
-
-            </div>
+            {restList.map((oneRestaurant, index) =>
+            (<div className='card-container'><Link to={`/restaurants/${oneRestaurant.name}`}> 
+            <ResturantInfo restList={oneRestaurant}/>
+            </Link></div>
             ))}
 
         </div>

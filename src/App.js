@@ -1,14 +1,12 @@
 import './App.css';
-import Chicken from './Chicken';
-
-
+import Routing from './Routes';
 
 
 function App() {
-  return (<div>
-      <Chicken />
-    </div>);
 
+  return (<div>
+    <Routing />
+  </div>);
 
 }
 

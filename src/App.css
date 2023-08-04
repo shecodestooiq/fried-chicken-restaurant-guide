@@ -1,40 +1,142 @@
-.App {
-  text-align: center;
-}
-
-
-.chicken-card {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 4rem;
-}
-
-.chicken-card input, select, label{
-  padding: 1rem;
-  border-radius: 1rem;
+html {
+  background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="%230D1282"></rect><g fill="%23D71313"><circle r="92" cx="55" cy="156"></circle><circle r="46" cx="569" cy="225"></circle><circle r="85" cx="334" cy="245"></circle><circle r="49" cx="102" cy="483"></circle><circle r="88" cx="482" cy="491"></circle><circle r="46" cx="762" cy="144"></circle><circle r="68" cx="571" cy="31"></circle><circle r="70" cx="820" cy="444"></circle><circle r="87" cx="332" cy="22"></circle><circle r="67" cx="664" cy="547"></circle><circle r="58" cx="893" cy="2"></circle><circle r="45" cx="264" cy="592"></circle><circle r="89" cx="896" cy="276"></circle></g></svg>');
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
   
 
+
 }
 
-button {
-  margin-top: 1rem;
-  border-radius: 1rem;
-  padding: 1rem;
+.App {
+  text-align: center;
+  color: #EEEDED;
 }
 
-.init-data {
+form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 4rem;
-  border-radius: 1rem;
-  border-style: groove;
+  width: 32rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
 }
 
-.init-data label, h1, h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2em;
+#rest-name {
+  background-color: #EEEDED;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: none;
+  box-shadow:
+    0 0 2px 2px #F0DE36,
+    0 0 5px 5px #D71313;
+  color: #D71313;
+  height: 2rem;
+  font-family: 'Tektur', cursive;
+}
+
+#rating {
+  background-color: #EEEDED;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: none;
+  box-shadow:
+    0 0 2px 2px #F0DE36,
+    0 0 5px 5px #D71313;
+  color: #D71313;
+  height: 2rem;
+  font-family: 'Tektur', cursive;
   text-align: center;
- 
+}
+
+#add-button {
+  background-color: #EEEDED;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: none;
+  box-shadow:
+    0 0 2px 2px #F0DE36,
+    0 0 5px 5px #D71313;
+  color: #D71313;
+  height: 2rem;
+  font-family: 'Tektur', cursive;
+}
+
+
+.restList-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 1rem;
+  width: 100%;
+  gap: 2rem;
+
+}
+
+.rest-card {
+  background-color: #EEEDED;
+  border-radius: 1rem;
+  border-width: 1rem;
+  border-style: double;
+  box-shadow:
+    0 0 5px 5px #F0DE36,
+    0 0 10px 10px #D71313;
+  color: #D71313;
+  width: 30rem;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: 'Tektur', cursive;
+  text-shadow:
+  0 0 2px #fff,
+  0 0 7px #fff,
+  0 0 21px #F0DE36,
+  0 0 41px #F0DE36;
+  font-size: 2em;
+}
+
+h1{
+  color: #EEEDED;
+  font-family: 'Tektur', cursive;
+  font-size: 3em;
+  text-shadow:
+  0 0 2px #fff,
+  0 0 7px #fff,
+  0 0 21px #F0DE36,
+  0 0 41px #F0DE36,
+  0 0 52px #F0DE36;
+  
+}
+
+::placeholder{
+  color: #D71313;
+  font-family: 'Tektur', cursive;
+}
+
+.welcome{
+  padding: 2rem;
+  display: flex;
+  color: #EEEDED;
+
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  
+}
+
+.welcome h1 {
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 42px #F0DE36,
+  0 0 82px #F0DE36,
+  0 0 92px #F0DE36,
+  0 0 102px #F0DE36;
+
 }
