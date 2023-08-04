@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(15, 9, 60);
+    background-color: #F9F7F1;
+ }
+  .nav-bg-img{
+    background-image: url('./fried-chicken-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-position-x: right;
+    position: relative;
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgba(230, 229, 238, 0.3);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5%;
+  }
+  nav h2{
+    margin: 0;
+  }
+  nav a{
+    text-decoration: none;
+    color: rgb(15, 9, 60);
+    padding: 10px;
+    border: rgb(15, 9, 60) 1px solid;
+    border-radius: 6px;
+    transition: 0.5s ease-in-out;
+  }
+  nav a:hover{
+    text-decoration: none;
+    background-color: rgb(15, 9, 60);
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
+  .header{
+    width: 100%;
+    height: 100vh;
+    color: rgb(15, 9, 60);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #ffffff;
+    background-image: url('./fried-chicken-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-position-x: right;
+    position: relative;
+    
+  }
+  .header div h1{
+    width: 40%;
+    margin-left: 260px;
+    margin-top: 240px;
+    font-size: 3rem;
+  }
+  .header div h2{
+    width: 40%;
+    margin-left: 260px;
+    margin-top: 30px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 300px));
+    gap: 1rem;
+    margin-top: 30PX;
+    margin-bottom: 50PX;
+  }
+  .grid input{
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6PX;
+    border-bottom: #0062ff 1px solid;
+   
+  }
+  .grid input::placeholder {
+    opacity: 0.4;
+  }
+  .mainSection{
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mainSection h1, .mainSection h2{
+    text-align: center;
+  }
+  ul{
+    padding: 0;
+  }
+  h3, h4{
+    margin: 5px;
+  }
+  h4{
+    color: #adaaaa;
+  }
+  .rateColor{
+    color: #C22D2C;
+  }
+  label{
+    margin-top: 30px;
+  }
+  .AddButton{
+    background-color: #0275FF;
+    border: none;
+    border-radius: 6PX;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.1rem;
+    width: 300PX;
+    color: white;
+  }
+  .AddButton:hover{
+    filter: drop-shadow(0px 1px 6px #bfbcbc);
+  }
+  .more-btn{
+    text-decoration: none;
+    color: rgb(15, 9, 60);
+    border-bottom:1.5px solid black;
+    padding-bottom:2px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .des-wrapper{
+    /* border: #C22D2C 1px solid; */
+    margin: 8%;
+    align-content: center;
+  }
+  .des-div{
+    /* border: #c2ae2c 1px solid; */
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30px, 30%));
+    place-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 6px;
+    width: 90%;
+}
+.des-details-div{
+    /* border: #45c22c 1px solid; */
+    margin: 30px auto;
+    width: 90%;
+    background-color: #ffffff;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    padding: 20px;
+}
+.des-details-container{
+    width: 70%;
+}
+
+.des-div .res-name-wrapper{
+    /* border: #2cc2b6 1px solid; */
+    width: 100%;
+}
+.des-div img{
+    width:90%;
+    /* border: #9d2cc2 1px solid; */
+}
+  .restaurantsDetailsCards{
+    width: 100%;
+    height: 100vh;
+    color: rgb(15, 9, 60);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .restaurantsDetailsCards img{
+    width: 10%;
+    flex: 1;
+  }
+  .des-card{
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease 0s;
+  }
+  .restaurantsCards{
+    display: grid;
+    grid-column: 2 / span 12;
+    grid-template-columns: repeat(12, minmax(auto, 200px));
+    width: 90%;
+    grid-gap: 10px;
+    place-items: center;
+  }
+  .restaurantsCards img{
+    width: 60%;
+  }
+  .card{
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease 0s;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 90%;
+    align-items: center;
+  }
+  .card:hover{
+    filter: drop-shadow(0px 1px 6px #bfbcbc);
+  }
+  .cardButton{
+    display: flex;
+    gap: 10px;
+    /* flex-direction: column; */
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 5px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .cardButton button{
+    background-color: #EEAE51;
+    border: none;
+    border-radius: 6PX;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    padding: 10px;
+  }
+  
+  .footer{
+    width: 100%;
+    height: 20vh;
+    color: rgb(15, 9, 60);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #ffffff;
+  }
+  
+  
+  @media only screen and (max-width: 1000px) {
+    /* nav h2{
+        font-size:  .9rem;
+    } */
+    .card {
+      grid-column-end: span 6;
+    }
+    .des-div{
+        grid-column-end: span 12;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        margin-top: 120px;
+        width: 100%;
+        padding-bottom: 25px;
+    }
+    .des-div h1{
+       font-size:  1.5rem;
+    }
+    .des-div img{
+        width: 200px;
+    }
+    .res-name-wrapper{
+        text-align: center;
+    }
+    .header{
+      height: 80vh;
+      background-image: url('./fried-chicken-img2.png');
+      background-size:90%;
+      align-items:normal;
+      /* border: 1px solid red; */
+    }
+    .header div h1{
+      margin-top: 117px;
+      width: 60%;
+      margin-left: 150px;
+      font-size: 2.2rem;
+    }
+    .header div h2{
+      margin-top: 30px;
+      width: 50%;
+      margin-left: 150px;
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    nav{
+        padding: 3%;
+    }
+    nav h2{
+        font-size:  1.3rem;
+    }
+    nav a{
+        font-size:  .9rem;
+    }
+    .mainSection{
+        grid-gap: 20px;
+    }
+    .card {
+      grid-column-end: span 12;
+    }
+    .header{
+      height: 80vh;
+      background-size:100%;
+      align-items:normal;
+    }
+    .header div h1{
+      width: 60%;
+      margin-left: 100px;
+      font-size: 2rem;
+    }
+    .header div h2{
+      margin-left: 100px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    nav{
+        padding: 5%;
+        justify-content:space-evenly;
+    }
+    nav h2{
+        font-size:  .9rem;
+    }
+    nav a{
+        font-size:  .6rem;
+    }
+    .mainSection {
+      grid-template-columns: 10px repeat(12, 1fr) 10px;
+      grid-gap: 10px;
+    }
+    .restaurantsCards, .newRes {
+      grid-column: 2 / span 3;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 20px;
+    }
+    .card {
+      grid-column-end: span 12;
+    }
+    .header{
+      height: 70vh;
+    }
+    .header div h1{
+      width: 60%;
+      margin-left: 80px;
+      font-size: 2rem;
+    }
+    .header div h2{
+      margin-left: 80px;
+      font-size: 1rem;
+    }
+  }
