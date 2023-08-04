@@ -1,11 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
 body{
     font-family: 'Open Sans', sans-serif;
     color: rgb(15, 9, 60);
     background-color: #F9F7F1;
-    /* background-color: #FBA147; */
+ }
+  .nav-bg-img{
+    background-image: url('./fried-chicken-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-position-x: right;
+    position: relative;
   }
-  
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgba(230, 229, 238, 0.3);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5%;
+  }
+  nav h2{
+    margin: 0;
+  }
+  nav a{
+    text-decoration: none;
+    color: rgb(15, 9, 60);
+    padding: 10px;
+    border: rgb(15, 9, 60) 1px solid;
+    border-radius: 6px;
+    transition: 0.5s ease-in-out;
+  }
+  nav a:hover{
+    text-decoration: none;
+    background-color: rgb(15, 9, 60);
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
   .header{
     width: 100%;
     height: 100vh;
@@ -20,17 +60,18 @@ body{
     background-attachment: fixed;
     background-position: right center;
     background-position-x: right;
+    position: relative;
     
   }
   .header div h1{
     width: 40%;
-    margin-left: 300px;
+    margin-left: 260px;
     margin-top: 240px;
     font-size: 3rem;
   }
   .header div h2{
     width: 40%;
-    margin-left: 300px;
+    margin-left: 260px;
     margin-top: 30px;
   }
   
@@ -40,9 +81,6 @@ body{
     gap: 1rem;
     margin-top: 30PX;
     margin-bottom: 50PX;
-    /* width: 90%; */
-    /* place-items: center; */
-    /* background-color: #ffffff; */
   }
   .grid input{
     padding: 15px;
@@ -92,6 +130,72 @@ body{
   .AddButton:hover{
     filter: drop-shadow(0px 1px 6px #bfbcbc);
   }
+  .more-btn{
+    text-decoration: none;
+    color: rgb(15, 9, 60);
+    border-bottom:1.5px solid black;
+    padding-bottom:2px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .des-wrapper{
+    /* border: #C22D2C 1px solid; */
+    margin: 8%;
+    align-content: center;
+  }
+  .des-div{
+    /* border: #c2ae2c 1px solid; */
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30px, 30%));
+    place-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 6px;
+    width: 90%;
+}
+.des-details-div{
+    /* border: #45c22c 1px solid; */
+    margin: 30px auto;
+    width: 90%;
+    background-color: #ffffff;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    padding: 20px;
+}
+.des-details-container{
+    width: 70%;
+}
+
+.des-div .res-name-wrapper{
+    /* border: #2cc2b6 1px solid; */
+    width: 100%;
+}
+.des-div img{
+    width:90%;
+    /* border: #9d2cc2 1px solid; */
+}
+  .restaurantsDetailsCards{
+    width: 100%;
+    height: 100vh;
+    color: rgb(15, 9, 60);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .restaurantsDetailsCards img{
+    width: 10%;
+    flex: 1;
+  }
+  .des-card{
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease 0s;
+  }
   .restaurantsCards{
     display: grid;
     grid-column: 2 / span 12;
@@ -102,13 +206,11 @@ body{
   }
   .restaurantsCards img{
     width: 60%;
-    /* margin: 20px 2px; */
   }
   .card{
     grid-column-end: span 4;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
     transition: all 0.3s ease 0s;
     padding: 10px;
     background-color: rgb(255, 255, 255);
@@ -154,8 +256,29 @@ body{
   
   
   @media only screen and (max-width: 1000px) {
+    /* nav h2{
+        font-size:  .9rem;
+    } */
     .card {
       grid-column-end: span 6;
+    }
+    .des-div{
+        grid-column-end: span 12;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        margin-top: 120px;
+        width: 100%;
+        padding-bottom: 25px;
+    }
+    .des-div h1{
+       font-size:  1.5rem;
+    }
+    .des-div img{
+        width: 200px;
+    }
+    .res-name-wrapper{
+        text-align: center;
     }
     .header{
       height: 80vh;
@@ -179,6 +302,15 @@ body{
   }
   
   @media only screen and (max-width: 700px) {
+    nav{
+        padding: 3%;
+    }
+    nav h2{
+        font-size:  1.3rem;
+    }
+    nav a{
+        font-size:  .9rem;
+    }
     .mainSection{
         grid-gap: 20px;
     }
@@ -202,6 +334,16 @@ body{
   }
   
   @media only screen and (max-width: 500px) {
+    nav{
+        padding: 5%;
+        justify-content:space-evenly;
+    }
+    nav h2{
+        font-size:  .9rem;
+    }
+    nav a{
+        font-size:  .6rem;
+    }
     .mainSection {
       grid-template-columns: 10px repeat(12, 1fr) 10px;
       grid-gap: 10px;
@@ -227,5 +369,3 @@ body{
       font-size: 1rem;
     }
   }
-  
-  
