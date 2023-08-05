@@ -1,35 +1,69 @@
 import "./App.css";
-import Resturant from "./components/Resturant";
 import ResturantPage from "./components/ResturantPage";
 
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import intialResturants from "./components/ResturantData";
+
+import React, { useState } from "react";
+import ResturantDetails from "./components/ResturantDetails";
+
+
 function App() {
-  const currentUrl = window.location.href;
+  const [updatedResturants, setUpdatedResturants] = useState(intialResturants);
+
+  const addResturant = (newRestaurant) => {
+    setUpdatedResturants([
+      ...updatedResturants,
+      { ...newRestaurant, link: `/${newRestaurant.name}` },
+    ]);
+  };
+
+  const deleteRestaurant = (index) => {
+    const updatedList = updatedResturants.filter((_, i) => i !== index);
+    setUpdatedResturants(updatedList);
+  };
+
+  // console.log(updatedResturants);
+
 
   return (
-    <div className="App">
-      {currentUrl === "http://localhost:3007/" ? (
+    <BrowserRouter>
+      <div className="App">
         <>
-          <h1>Fried Chicken Guide Web App</h1>
-          <ResturantPage />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <ResturantPage
+                  updatedResturants={updatedResturants}
+                  addResturant={addResturant}
+                  deleteRestaurant={deleteRestaurant}
+                />
+              }
+            />
+
+            {updatedResturants.map((res, index) => {
+              return (
+                <Route
+                  key={index}
+                  path={`/${res.link}`}
+                  element={
+                    <ResturantDetails
+                      key={index}
+                      name={res.name}
+                      location={res.location}
+                      rate={res.rate}
+                    />
+                  }
+                />
+              );
+            })}
+            
+          </Routes>
         </>
-      ) : (
-        <div className="dummy-resturant">
-          <div className="title-loc">
-            <center>
-              <div>
-                <h1>Meal king</h1>
-                <h3>location</h3>
-              </div>
-            </center>
-          </div>
-          <div className="details">
-            <center>
-              <h1>details</h1>
-            </center>
-          </div>
-        </div>
-      )}
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

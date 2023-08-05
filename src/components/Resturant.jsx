@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
+
 
 function Resturant(props) {
   const { index, name, location, rate, onDelete, link } = props;
@@ -13,7 +15,7 @@ function Resturant(props) {
   };
 
   return (
-    <a href={link}>
+    <Link to={link} >
       <div className="restaurant" key={index}>
         <div className="name-loc">
           <h2>{name}</h2>
@@ -32,7 +34,8 @@ function Resturant(props) {
           </button>
         </div>
       </div>
-    </a>
+
+    </Link>
   );
 }
 

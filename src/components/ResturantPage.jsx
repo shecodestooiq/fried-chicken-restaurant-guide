@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import Resturant from "./Resturant";
 import Input from "./Input";
+import intialResturants from "./ResturantData";
 
-function ResturantPage() {
-  let intialResturants = [
-    { name: "Meal king", location: "baghdad", rate: 5 , link:'meal-king'},
-    { name: "Meal king", location: "baghdad", rate: 5, link:'meal-king 2' },
-  ];
-
-  const [updatedResturants, setUpdatedResturants] = useState(intialResturants);
-
-  const addResturant = (newRestaurant) => {
-    setUpdatedResturants([...updatedResturants, newRestaurant]);
-  };
-
-
-  const deleteRestaurant = (index) => {
-    const updatedList = updatedResturants.filter((_, i) => i !== index);
-    setUpdatedResturants(updatedList);
-  };
-
+function ResturantPage(props) {
+  const { updatedResturants, addResturant, deleteRestaurant } = props;
 
   return (
     <>
+      <h1>Fried Chicken Guide Web App</h1>
       <Input onSubmit={addResturant} />
 
       {updatedResturants.map((res, index) => {
@@ -32,7 +18,7 @@ function ResturantPage() {
             name={res.name}
             location={res.location}
             rate={res.rate}
-            onDelete={()=>deleteRestaurant(index)}
+            onDelete={() => deleteRestaurant(index)}
             link={res.link}
           />
         );
@@ -40,5 +26,6 @@ function ResturantPage() {
     </>
   );
 }
+// export { intialResturants };
 
 export default ResturantPage;
