@@ -1,10 +1,16 @@
 import Restaurants from './Components/Resturants'
 import './App.css';
+import DetailsPage from './Components/DetailsPage';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return <div>
-   <Restaurants/>
+    <Routes>
+    <Route path="/" element={   <Restaurants />} />
+      <Route path="/DetailsPage" element={<DetailsPage />}></Route>
+    </Routes>
+ 
   </div>
 }
 

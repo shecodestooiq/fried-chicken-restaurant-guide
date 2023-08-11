@@ -7,7 +7,7 @@ const AddRestaurant = ({ addRestaurant }) => {
   const [rating, setRating] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the page from reloading
 
     const newRestaurant = {
       name,

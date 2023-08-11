@@ -7,6 +7,13 @@ body {
     background-attachment: fixed;
     font-family: Montserrat;
     background-color: #FDEBD0;
+    
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
 }
 
 .restaurants {
@@ -57,4 +64,33 @@ h1 {
     color: #FFD700;
     border-radius: 10px;
     margin: 10px;
+}
+.btn:hover {
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+}
+.nav-item{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: #25870f;
+   display: block;
+   margin: 10px;
+
+}
+.nav-item:hover{
+ color: #37ff0a;
+   
+}
+.details{
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: block;
+    height: auto;
+    width: 600px;
+    background-color: #FEE7C3;
+    color: #D2691E;
+    font-size: 27px;
+    border-radius: 30px;
+    align-self: center;
 }
