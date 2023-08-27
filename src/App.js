@@ -1,7 +1,17 @@
-import './App.css';
+import "./App.css";
+import React from "react";
+import Resturants from "./components/Resturants";
+import Navbar from "./components/Navbar";
 
-function App() {
-  return <>Fried Chicken Guide Web App</>;
+
+
+export default function App() {
+  return (
+    <div className="App">
+     
+         <Navbar/>
+         <Resturants />
+    
+    </div>
+  );
 }
-
-export default App;
