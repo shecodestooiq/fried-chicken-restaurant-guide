@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Link} from 'react-router-dom'
 const Ratings = () => {
     const[restuarants,setRestuarant]=useState([
         {name:'KFC' ,
@@ -20,6 +21,7 @@ const Ratings = () => {
         const newRes=restuarants.filter((_,i)=>index !== i);
         setRestuarant(newRes);
       }
+return(<>
       <div>
       <h1>Add your Favorite Restuaran</h1>
   <label>Name:<input type="text"
@@ -52,6 +54,8 @@ const Ratings = () => {
 
       </div>
 
-    ))};
+    ))}
+    </>
+)
        }
     export default Ratings;
