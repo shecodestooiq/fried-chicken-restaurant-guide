@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import Resturant from "./Resturant";
-import Input from "./Input";
-import intialResturants from "./ResturantData";
+import Resturant from "../components/Resturant";
+import Input from "../components/Input";
+import intialResturants from "../components/ResturantData";
+import Cover from '../components/Cover'
 
 function ResturantPage(props) {
   const { updatedResturants, addResturant, deleteRestaurant } = props;
 
   return (
     <>
-      <h1>Fried Chicken Guide Web App</h1>
+      <Cover />
+
+
       <Input onSubmit={addResturant} />
 
       {updatedResturants.map((res, index) => {

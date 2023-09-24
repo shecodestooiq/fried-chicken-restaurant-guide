@@ -1,13 +1,12 @@
 import "./App.css";
-import ResturantPage from "./components/ResturantPage";
+import ResturantPage from "./pages/ResturantPage";
 
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import intialResturants from "./components/ResturantData";
 
 import React, { useState } from "react";
-import ResturantDetails from "./components/ResturantDetails";
-
+import ResturantDetails from "./pages/ResturantDetails";
 
 function App() {
   const [updatedResturants, setUpdatedResturants] = useState(intialResturants);
@@ -25,7 +24,6 @@ function App() {
   };
 
   // console.log(updatedResturants);
-
 
   return (
     <BrowserRouter>
@@ -59,7 +57,6 @@ function App() {
                 />
               );
             })}
-            
           </Routes>
         </>
       </div>
