@@ -1,5 +1,15 @@
 # Fried Chicken Guide Web App
 
+
+![alt-text](https://github.com/Aya-Jafar/fried-chicken-restaurant-guide/blob/master/React%20App%20(13).png)
+
+
+
+
+
+
+
+
 Dear students,
 
 Use your React Js Skills to build an app that can find the best Fried Chicken Resturant in Baghdad
