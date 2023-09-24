@@ -1,5 +1,5 @@
+import { div } from "@tensorflow/tfjs";
 import React, { useState } from "react";
-
 
 function Form({ onSubmit: addRestaurant }) {
   const [restaurantName, setRestaurantName] = useState("");
@@ -32,33 +32,41 @@ function Form({ onSubmit: addRestaurant }) {
   };
 
   return (
-    <form className="restaurant-form" onSubmit={handleSubmit}>
-      <label htmlFor="input-name">Name</label>
-      <input
-        type="text"
-        name="restaurant"
-        id="input-name"
-        value={restaurantName}
-        onChange={handleNameChange}
-      />
-      <label htmlFor="input-location">Location</label>
-      <input
-        type="text"
-        name="location"
-        id="input-location"
-        value={restaurantLocation}
-        onChange={handleLocationChange}
-      />
-      <label htmlFor="input-rate">Rate</label>
-      <input
-        type="number"
-        name="rate"
-        id="input-rate"
-        value={restaurantRate}
-        onChange={handleRateChange}
-      />
-      <button type="submit">Add Restaurant</button>
-    </form>
+    <div className="form-section">
+      <h1>Add Your favorite restaurant now!</h1>
+      <form className="restaurant-form" onSubmit={handleSubmit}>
+        <label htmlFor="input-name">Name</label>
+        <input
+          type="text"
+          name="restaurant"
+          id="input-name"
+          value={restaurantName}
+          onChange={handleNameChange}
+        />
+        <label htmlFor="input-location">Location</label>
+        <input
+          type="text"
+          name="location"
+          id="input-location"
+          value={restaurantLocation}
+          onChange={handleLocationChange}
+        />
+        <label htmlFor="input-rate">Rate</label>
+        <input
+          type="number"
+          name="rate"
+          id="input-rate"
+          value={restaurantRate}
+          onChange={handleRateChange}
+        />
+        <br />
+        <br />
+        <center>
+          {" "}
+          <button type="submit">Add Restaurant</button>
+        </center>
+      </form>
+    </div>
   );
 }
 

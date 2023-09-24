@@ -1,6 +1,15 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import staticImage from "../images/res.png";
+import deleteIcon from "../images/bin.png";
 
+function ResLink({ child, link }) {
+  return (
+    <Link to={link} style={{ textDecoration: "none", color: "black" }}>
+      {child}
+    </Link>
+  );
+}
 
 function Resturant(props) {
   const { index, name, location, rate, onDelete, link } = props;
@@ -13,29 +22,33 @@ function Resturant(props) {
   const decreaseRate = () => {
     setCurrentRate((prevRate) => Math.max(prevRate - 1, 0));
   };
+  
 
   return (
-    <Link to={link} >
+    <>
       <div className="restaurant" key={index}>
-        <div className="name-loc">
-          <h2>{name}</h2>
-          <h3>{location}</h3>
+        <ResLink child={<img src={staticImage} alt="" />} link={link} />
 
-          <button onClick={onDelete}>Delete</button>
+        <div className="name-del">
+          <ResLink
+            child={
+              <div className="name-loc">
+                <h2>{name}</h2>
+                <p>{location}</p>
+              </div>
+            }
+            link={link}
+          />
+          <img src={deleteIcon} alt="" onClick={onDelete} />
         </div>
 
         <div className="rate">
-          <button onClick={increaseRate} style={{ backgroundColor: "#f9f9f9" }}>
-            increase
-          </button>
+          <h2 onClick={increaseRate}>+</h2>
           <h2>{currentRate}</h2>
-          <button onClick={decreaseRate} style={{ backgroundColor: "#f9f9f9" }}>
-            decrease
-          </button>
+          <h2 onClick={decreaseRate}>-</h2>
         </div>
       </div>
-
-    </Link>
+    </>
   );
 }
 

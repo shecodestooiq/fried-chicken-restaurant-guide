@@ -1,8 +1,8 @@
-
-import React from 'react';
+import React from "react";
+import cover from "../images/cover.jpg";
 
 function Cover() {
-    return ( <></> );
+  return <div className="cover"><img src={cover} alt="" /></div>;
 }
 
 export default Cover;
