@@ -1,7 +1,14 @@
 import './App.css';
+import FriedChicken from './componants/FriedChicken';
+import Page from './componants/Page';
 
 function App() {
-  return <>Fried Chicken Guide Web App</>;
+  return (
+    <>
+      <FriedChicken />
+      <Page/>
+    </>
+  )
 }
 
 export default App;
